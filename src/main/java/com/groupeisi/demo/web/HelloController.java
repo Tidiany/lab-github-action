@@ -10,6 +10,6 @@ public class HelloController {
 
     @GetMapping
     public String message(){
-        return "Salaam...";
+        return "Salaam salaam gays...";
     }
 }
