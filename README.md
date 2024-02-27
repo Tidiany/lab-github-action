@@ -139,3 +139,11 @@ Ainsi une fois la validation des modifications et le push éffectuer vers notre 
 > **Deploiement sur Docker Hub**
  
 ![ GitHub Actions Workflows Folder](https://github.com/Tidiany/lab-github-action/blob/main/src/main/resources/static/images/docker-image-pushed-on-registry.png?raw=true)
+
+### Perspectives
+***
+1. Crée un job pour les test sonar
+2. Crée un job pour se connecter sur AWS déployé le jar sur un EC2.
+3. configuration DNS 
+4. Execution du jar sur notre serveur EC2
+5. Faire le link entre les différents jobs.
