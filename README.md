@@ -1,5 +1,4 @@
 # Lab Github Action
-***
 ![Tidiany](https://img.shields.io/badge/work-on%20progress-red.svg)
 ![Java](https://img.shields.io/badge/Tidiany-Java-brown)
 ![Spring Boot](https://img.shields.io/badge/Tidiany-Spring%20Boot-green)
@@ -38,8 +37,7 @@ Les workflows sont définis dans le répertoire `.github/workflows` d’un réf�
 
 ### Événements
 Un événement est une activité spécifique dans un dépôt qui déclenche l'exécution d'un workflow. Par exemple, l'activité peut provenir de GitHub quand quelqu'un crée une demande de tirage (pull request), ouvre un problème ou pousse (push) un commit vers un dépôt. Vous pouvez également déclencher une exécution de workflow selon une planification, en publiant dans une API REST ou manuellement.
-Exemple:
-***
+> Exemple:
 ```bash
 on:
   push:
@@ -50,7 +48,7 @@ on:
 Un travail est un ensemble d'étapes dans un workflow qui s'exécute sur le même exécuteur. Chaque étape est un script d'interpréteur de commandes qui sera exécuté ou une action qui sera exécutée. Les étapes sont exécutées dans l'ordre et dépendent les unes des autres. Comme chaque étape est exécutée sur le même exécuteur, vous pouvez partager des données d'une étape à une autre. Par exemple, vous pouvez avoir une étape qui génère votre application suivie d'une étape qui teste l'application générée.
 
 Vous pouvez configurer les dépendances d'un travail avec d'autres travaux. Par défaut, les travaux n'ont aucune dépendance et s'exécutent en parallèle entre eux. Lorsqu'un travail prend une dépendance sur un autre travail, il attend que le travail dépendant se termine avant de pouvoir s'exécuter. Par exemple, vous pouvez avoir plusieurs travaux de génération pour différentes architectures qui n'ont pas de dépendances, et un travail d'empaquetage dépendant de ces travaux. Les travaux de génération s'exécutent en parallèle et le travail d'empaquetage s'exécutera quand ils auront fini de s'exécuter.
-Exemple:
+> Exemple:
 ```bash
 jobs:
   build:
@@ -64,7 +62,7 @@ Une action est une application personnalisée pour la plateforme GitHub Actions 
 Vous pouvez écrire vos propres actions ou trouver des actions à utiliser dans vos workflows dans le GitHub Marketplace.
 
 Pour partager des actions au sein de votre entreprise sans les publier publiquement, vous pouvez les stocker dans un référentiel interne, puis configurer celui-ci pour autoriser l’accès aux workflows GitHub Actions dans d’autres référentiels appartenant à la même organisation ou à toute autre organisation de l’entreprise.
-Exemple:
+> Exemple:
 ```bash
 - name: Récuperation du projet...
 uses: actions/checkout@v2
