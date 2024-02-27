@@ -81,6 +81,7 @@ uses: actions/checkout@v2
 ### Exécuteurs
 ***
 Un exécuteur est un serveur qui exécute vos workflows quand ils sont déclenchés. Chaque exécuteur peut exécuter un seul travail à la fois. GitHub fournit les exécuteurs Ubuntu Linux, Microsoft Windows et macOS pour exécuter vos workflows. Chaque exécution de workflow s'exécute sur une machine virtuelle nouvellement provisionnée. GitHub propose également des exécuteur plus grand, qui sont disponibles dans des configurations plus grandes. Si vous avez besoin d'un système d'exploitation différent ou d'une configuration matérielle spécifique, vous pouvez héberger vos propres exécuteurs.
+> Exemple:
 ```bash
     runs-on: ubuntu-latest
 ```
@@ -90,6 +91,7 @@ Un exécuteur est un serveur qui exécute vos workflows quand ils sont déclench
 GitHub Actions utilise la syntaxe YAML pour définir le workflow. Chaque workflow est stocké en tant que fichier YAML distinct dans votre référentiel de code, dans un répertoire appelé .github/workflows.
 
 Vous pouvez créer un exemple de workflow dans votre dépôt qui déclenche automatiquement une série de commandes chaque fois que du code est poussé (push). Dans ce workflow, GitHub Actions extrait le code envoyé, installe la version 17 de Java avec la distribution temurin, build le projet avec maven et exécute une commande de base pour builder l'image du projet afin de le publier sur Docker Hub toujours en utilisant maven.
+> Exemple:
 ```bash
 name: build-and-push-image
 
