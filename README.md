@@ -11,6 +11,12 @@
 3. [Composants de GitHub Actions](#composants-de-gitHub-actions)
 4. [Workflows](#workflows)
 5. [Événements](#événements)
+6. [Jobs](#jobs)
+7. [Actions](#actions)
+8. [Exécuteurs](#exécuteurs)
+9. [Exemple complet de workflow](#exemple-complet-de-workflow)
+10. [Illustration](#illustration)
+
 
 # Documentation
 Ce projet est un lab pour mettre en place une chaine d'intégration sur un projet Spring Boot avec Github Action et Docker.
@@ -46,7 +52,7 @@ on:
     branches: [ main]
 ```
 
-### Jobs (travaux)
+### Jobs
 ***
 Un travail est un ensemble d'étapes dans un workflow qui s'exécute sur le même exécuteur. Chaque étape est un script d'interpréteur de commandes qui sera exécuté ou une action qui sera exécutée. Les étapes sont exécutées dans l'ordre et dépendent les unes des autres. Comme chaque étape est exécutée sur le même exécuteur, vous pouvez partager des données d'une étape à une autre. Par exemple, vous pouvez avoir une étape qui génère votre application suivie d'une étape qui teste l'application générée.
 
@@ -119,13 +125,15 @@ Ainsi une fois la validation des modifications et le push éffectuer vers notre 
 
 ### Illustration:
 ***
->**Lancement du build**
+> [!NOTE]
+> **Lancement du build**
 > 
 ![ GitHub Actions Workflows Folder](https://github.com/Tidiany/lab-github-action/blob/main/src/main/resources/static/images/buil-on-github-action-1.png?raw=true)
 ![ GitHub Actions Workflows Folder](https://github.com/Tidiany/lab-github-action/blob/main/src/main/resources/static/images/buil-on-github-action-2.png?raw=true)
 ![ GitHub Actions Workflows Folder](https://github.com/Tidiany/lab-github-action/blob/main/src/main/resources/static/images/buil-on-github-action-3.png?raw=true)
 ![ GitHub Actions Workflows Folder](https://github.com/Tidiany/lab-github-action/blob/main/src/main/resources/static/images/buil-on-github-action-4.png?raw=true)
 
->**Deploiement sur Docker Hub**
-> 
+> [!NOTE]
+> **Deploiement sur Docker Hub**
+ 
 ![ GitHub Actions Workflows Folder](https://github.com/Tidiany/lab-github-action/blob/main/src/main/resources/static/images/docker-image-pushed-on-registry.png?raw=true)
